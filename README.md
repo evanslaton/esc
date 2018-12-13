@@ -1,5 +1,6 @@
 # Esc
 Java 401 Midterm Project
+The Team: [Daniel Logerstedt](https://github.com/daniellogerstedt), [Pablo Rosales](https://github.com/Pablito14), [Jeff Borda](https://github.com/jeffborda) and [Evan Slaton](https://github.com/evanslaton)
 
 ![Esc Logo](assets/esc-logo.png)
 
