@@ -1,5 +1,6 @@
 # Esc
 Java 401 Midterm Project
+
 ![Esc Logo](assets/esc-logo.png)
 
 ## Problem Domain:
