@@ -13,8 +13,18 @@ Practicle Application:
 * To send yourself a reminder
 * To impress someone who might have visual access to your phone
 
-## User Story
-As a user, I want to be able to send myself a text message (that I wrote) at a time that I specified, so that can use the text as an excuse to get out of uncomfortable situations, remind myself to do something or impress someone.
+## User Stories
+* As a user, I want to be able to signup so that I don't have to re-enter my personal information each time I visit the app.
+* As a user, I want my personal information to be stored safely so only I can access it.
+* As a user, I want to be able to login so that I can access my personal data.
+* As a user, I want to be able to send myself a text message (that I wrote) at a time that I specified, so I can use the text as an excuse to get out of uncomfortable situations, remind myself to do something or impress someone.
+* As a developer, I want to ensure that user data is stored safely.
+* As a developer, I want the system to check the database once a minute to check which messages need to be sent.
+
+### Stretch
+* As a user, I want to be able to send **someone else** a text message (that I wrote) at a time that I specified, so **they** can use the text as an excuse to get out of uncomfortable situations, remind themselves to do something or impress someone.
+* As a developer, I want users to interface with a clean and simple front-end.
+
 
 ## Possible Features
 * Dead Man's Switch: sends a message to someone after a specified set of time, if the user doesn't respond, sends an SMS to the people the user specified
