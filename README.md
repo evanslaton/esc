@@ -37,3 +37,24 @@ Practicle Application:
 
 ## License
 MIT License
+
+## Team Aggreement
+**Communication plan**: How will your group communicate with each other? What is your strategy for ensuring everyone’s voices are heard, and that contributions from both Communication plan: How will your group communicate with each other? What is your strategy for ensuring everyone’s voices are heard, and that contributions from both loud and soft voices are listened to? Do you have a plan for managing psychological safety?
+
+* Primarily through slack, a quick stand up in the morning, and another one after lunch. (kanban / issues on Github)
+
+**Conflict plan**: What will your group do when it encounters conflict? What will your process be to resolve it?
+
+* If two people are stuck at an impass, put it on hold until the next stand up. If it continues to escalate or can't be resolved, seek a third party (like a T/A or instructor) to arbitrate.
+
+**Work plan**: How you will identify tasks, assign tasks, know when they are complete, and manage work in general? In particular, make sure you know how you’ll track whether everyone is contributing equally to all parts of the application and that each person is working on “meaty” problems.
+
+* Make sure everyone contributes to both the front and back ends. We can assign tasks by starting with our strengths and delegating on where we need to.
+
+**Git process**: What is your Git flow? How many people must review a PR? Who merges PRs?
+
+* All work has to be on a branch, 2 people reviews required to merge, the second reviewer should merge it. When we have our application up and running, create a staging branch to act as a protective layer for our master branch.
+
+**Anything else**: expectations around work times, standup times, taking breaks/seeking help when you’re stuck, etc.
+
+* Pablo will have the role of project manager to organize the groups work.
