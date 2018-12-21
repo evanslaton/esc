@@ -13,6 +13,9 @@ Practicle Application:
 * To send yourself a reminder
 * To impress someone who might have visual access to your phone
 
+## Database Model
+![Database Model](assets/database-model.png)
+
 ## User Stories
 * As a user, I want to be able to signup so that I don't have to re-enter my personal information each time I visit the app. (10 hours)
 * As a user, I want my personal information to be stored safely so only I can access it.(We think this will take 3 hours of the previous story)
@@ -23,11 +26,9 @@ Practicle Application:
 * As a developer, I want to ensure that user data is stored safely. (We think this will take 3 hours of the first story)
 * As a developer, I want the system to check the database once a minute to check which messages need to be sent. (2 hours)
 
-
 ### Stretch
 * As a user, I want to be able to send **someone else** a text message (that I wrote) at a time that I specified, so **they** can use the text as an excuse to get out of uncomfortable situations, remind themselves to do something or impress someone. (4 hours)
 * As a developer, I want users to interface with a clean and simple front-end. (8 hours)
-
 
 ## Possible Features
 * Dead Man's Switch: sends a message to someone after a specified set of time, if the user doesn't respond, sends an SMS to the people the user specified
