@@ -55,7 +55,7 @@ MIT License
 * Evan, Dan and Jeff are working Sat 12/22
 * The team will not work over the course of next week (12/24 - 12/28)
 * Evan will work 1/1 to compensate for one of the days he won't be present
-* Business as usuall starting 12/2
+* Business as usuall starting 1/2
 
 **Git Process**: What is your Git flow? How many people must review a PR? Who merges PRs?
 
