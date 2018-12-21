@@ -51,6 +51,12 @@ MIT License
 **Work Plan**: How you will identify tasks, assign tasks, know when they are complete, and manage work in general? In particular, make sure you know how you’ll track whether everyone is contributing equally to all parts of the application and that each person is working on “meaty” problems.
 * Make sure everyone contributes to both the front and back ends. We can assign tasks by starting with our strengths and delegating on where we need to.
 
+## Task breakdown
+![Task breakdown](assets/taskBreakdown.jpg)
+
+## Task assingment
+![Task assignnment](assets/taskAssignment.jpg)
+
 **Holiday Work Plan**: Evan will not be available 12/24 - 12/31
 * Evan, Dan and Jeff are working Sat 12/22
 * The team will not work over the course of next week (12/24 - 12/28)
