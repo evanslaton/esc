@@ -49,10 +49,13 @@ MIT License
 * If two people are stuck at an impasse, put it on hold until the next stand up. If it continues to escalate or can't be resolved, seek a third party (like a T/A or instructor) to arbitrate.
 
 **Work Plan**: How you will identify tasks, assign tasks, know when they are complete, and manage work in general? In particular, make sure you know how you’ll track whether everyone is contributing equally to all parts of the application and that each person is working on “meaty” problems.
-
-**Holiday Work Plan**:
-
 * Make sure everyone contributes to both the front and back ends. We can assign tasks by starting with our strengths and delegating on where we need to.
+
+**Holiday Work Plan**: Evan will not be available 12/24 - 12/31
+* Evan, Dan and Jeff are working Sat 12/22
+* The team will not work over the course of next week (12/24 - 12/28)
+* Evan will work 1/1 to compensate for one of the days he won't be present
+* Business as usuall starting 12/2
 
 **Git Process**: What is your Git flow? How many people must review a PR? Who merges PRs?
 
