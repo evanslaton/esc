@@ -1,6 +1,5 @@
-package com.esc.applicationuser;
+package com.esc.user;
 
-import com.esc.user.ApplicationUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
