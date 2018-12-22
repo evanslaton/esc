@@ -1,6 +1,6 @@
 package com.esc.user;
 
-import com.esc.message.Message;
+import com.esc.message.TextMessage;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,7 +20,7 @@ public class ApplicationUser implements UserDetails {
 
     // Database Relationship(s)
     @OneToMany(mappedBy="applicationUser")
-    public List<Message> messages;
+    public List<TextMessage> messages;
 
     // Default constructor
     public ApplicationUser() {}

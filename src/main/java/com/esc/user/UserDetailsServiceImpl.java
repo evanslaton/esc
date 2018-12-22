@@ -1,5 +1,6 @@
-package com.esc.user;
+package com.esc.applicationuser;
 
+import com.esc.user.ApplicationUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -10,11 +11,11 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private ApplicationUserRepository ApplicationUserRepo;
+    private ApplicationUserRepository applicationUserRepo;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        ApplicationUser user = this.ApplicationUserRepo.findByUsername(username);
+        ApplicationUser user = this.applicationUserRepo.findByUsername(username);
 
         if (user == null) {
             System.out.println("User not found: " + username);
