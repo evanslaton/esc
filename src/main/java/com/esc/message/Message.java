@@ -1,6 +1,8 @@
 package com.esc.message;
 
 import com.esc.user.ApplicationUser;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDateTime;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,7 +13,7 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
-    public Date datetime;
+    public LocalDateTime datetime;
     public String message;
 
     // Database Relationship(s)
@@ -22,7 +24,7 @@ public class Message {
     public Message() {}
 
     // Constructor
-    public Message(Date datetime, String message) {
+    public Message(LocalDateTime datetime, String message) {
         this.datetime = datetime;
         this.message = message;
     }
