@@ -1,4 +1,4 @@
-package com.esc.esc.message;
+package com.esc.message;
 
 public class MessageController {
 }
