@@ -33,4 +33,5 @@ dependencies {
 	runtimeOnly('org.postgresql:postgresql')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.security:spring-security-test')
+	compile group: "com.twilio.sdk", name: "twilio", version: "7.33.0"
 }

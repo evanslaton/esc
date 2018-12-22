@@ -1,4 +1,6 @@
 package com.esc.esc.message;
 
-public interface MessageRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface MessageRepository extends CrudRepository<Message, Long> {
 }
