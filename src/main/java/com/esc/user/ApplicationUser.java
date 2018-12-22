@@ -1,6 +1,6 @@
-package com.esc.esc.user;
+package com.esc.user;
 
-import com.esc.esc.message.Message;
+import com.esc.message.Message;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

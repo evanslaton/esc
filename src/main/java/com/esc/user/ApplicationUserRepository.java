@@ -1,4 +1,4 @@
-package com.esc.esc.user;
+package com.esc.user;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,4 +1,4 @@
-package com.esc.esc;
+package com.esc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

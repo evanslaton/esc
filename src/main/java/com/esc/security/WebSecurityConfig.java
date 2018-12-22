@@ -1,6 +1,6 @@
-package com.esc.esc.security;
+package com.esc.security;
 
-import com.esc.esc.user.UserDetailsServiceImpl;
+import com.esc.user.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

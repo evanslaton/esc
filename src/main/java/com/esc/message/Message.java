@@ -1,6 +1,6 @@
-package com.esc.esc.message;
+package com.esc.message;
 
-import com.esc.esc.user.ApplicationUser;
+import com.esc.user.ApplicationUser;
 
 import javax.persistence.*;
 import java.util.Date;
