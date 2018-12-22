@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Message {
+public class TextMessage {
     // Instance properties
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,10 +19,10 @@ public class Message {
     public ApplicationUser applicationUser;
 
     // Default constructor
-    public Message() {}
+    public TextMessage() {}
 
     // Constructor
-    public Message(Date datetime, String message) {
+    public TextMessage(Date datetime, String message) {
         this.datetime = datetime;
         this.message = message;
     }
