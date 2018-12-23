@@ -13,7 +13,8 @@ public class TextMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
-    public LocalDateTime datetime;
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date datetime;
     public String message;
 
     // Database Relationship(s)
@@ -24,7 +25,7 @@ public class TextMessage {
     public TextMessage() {}
 
     // Constructor
-    public TextMessage(LocalDateTime datetime, String message) {
+    public TextMessage(Date datetime, String message) {
         this.datetime = datetime;
         this.message = message;
     }
