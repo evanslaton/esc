@@ -1,6 +1,8 @@
 package com.esc.message;
 
 import com.esc.user.ApplicationUser;
+import org.joda.time.DateTime;
+import org.joda.time.LocalDateTime;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,6 +13,7 @@ public class TextMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
+    @Temporal(TemporalType.TIMESTAMP)
     public Date datetime;
     public String message;
 

@@ -8,6 +8,19 @@
     <div th:replace="~{fragments :: header}"></div>
     <h1>PROFILE PAGE</h1>
 
+
+    <h2>Create New Message</h2>
+    <form action="/messages" method="POST">
+        <label for="day">Day to Send</label>
+        <input type="date" name="day" id="day" required />
+        <label for="time">Time to Send</label>
+        <input type="time" name="time" id="time" required />
+        <label for="rawMessage">Message</label>
+        <textarea name="rawMessage" id="rawMessage" class="text" required></textarea>
+        <input type="submit" />
+    </form>
+
     <div th:replace="~{fragments :: scripts}"></div>
+
 </body>
 </html>
