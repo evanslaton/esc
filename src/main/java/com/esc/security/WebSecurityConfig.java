@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 
 @Configuration
 @EnableWebSecurity
@@ -42,6 +43,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
             // Pages anyone is authorized to go to at any time (including not logged in)
             .antMatchers("/", "/signup").permitAll()
+            .antMatchers("/images/**").permitAll()
+            .antMatchers("/css/**").permitAll()
+            .antMatchers("/js/**").permitAll()
             .anyRequest().authenticated()
 
             // Login handlers
@@ -64,5 +68,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
+    }
+
+    @Bean
+    public SpringSecurityDialect springSecurityDialect() {
+        return new SpringSecurityDialect();
     }
 }
