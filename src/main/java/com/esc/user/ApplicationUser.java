@@ -14,6 +14,7 @@ public class ApplicationUser implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
+    @Column(unique = true)
     public String username;
     public String password;
     public String phoneNumber;

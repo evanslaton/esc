@@ -193,19 +193,19 @@ public class EscIntegrationSuite {
     public void request(String method, String url) {
         switch (method) {
             case "GET" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.GET, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.GET, this.requestEntity, String.class);
                 break;
             case "PUT" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.PUT, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.PUT, this.requestEntity, String.class);
                 break;
             case "POST" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.POST, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.POST, this.requestEntity, String.class);
                 break;
             case "DELETE" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.DELETE, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.DELETE, this.requestEntity, String.class);
                 break;
             case "HEAD" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.HEAD, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.HEAD, this.requestEntity, String.class);
                 break;
         }
     }
@@ -219,19 +219,19 @@ public class EscIntegrationSuite {
     public void request(String method, URI url) {
         switch (method) {
             case "GET" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.GET, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.GET, this.requestEntity, String.class);
                 break;
             case "PUT" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.PUT, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.PUT, this.requestEntity, String.class);
                 break;
             case "POST" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.POST, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.POST, this.requestEntity, String.class);
                 break;
             case "DELETE" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.DELETE, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.DELETE, this.requestEntity, String.class);
                 break;
             case "HEAD" :
-                this.response = this.restTemplate.exchange(url, HttpMethod.HEAD, this.requestEntity, String.class);
+                this.response = this.restTemplate.exchange("http://localhost:" + port + url, HttpMethod.HEAD, this.requestEntity, String.class);
                 break;
         }
     }
@@ -243,7 +243,7 @@ public class EscIntegrationSuite {
      */
 
     public void request(HttpMethod method, String url) {
-        this.response = this.restTemplate.exchange(url, method, this.requestEntity, String.class);
+        this.response = this.restTemplate.exchange("http://localhost:" + port + url, method, this.requestEntity, String.class);
     }
 
 
@@ -254,7 +254,7 @@ public class EscIntegrationSuite {
      */
 
     public void request(HttpMethod method, URI url) {
-        this.response = this.restTemplate.exchange(url, method, this.requestEntity, String.class);
+        this.response = this.restTemplate.exchange("http://localhost:" + port + url, method, this.requestEntity, String.class);
     }
 
     /*
@@ -268,8 +268,6 @@ public class EscIntegrationSuite {
     public ResponseEntity<String> getResponse() {
         return this.response;
     }
-
-
 
     /** Gets all cookies attached to the response.
      *
@@ -316,8 +314,14 @@ public class EscIntegrationSuite {
      *
      * @return Body of the most recent response.
      */
-
     public String responseBody() {
         return this.response.getBody();
+    }
+
+    /** Resets the response to null for multiple requests
+     *
+     */
+    public void resetResponse() {
+        this.response = null;
     }
 }
