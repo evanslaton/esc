@@ -42,6 +42,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
             // Pages anyone is authorized to go to at any time (including not logged in)
             .antMatchers("/", "/signup").permitAll()
+            .antMatchers("/images/**").permitAll()
+            .antMatchers("/css/**").permitAll()
+            .antMatchers("/js/**").permitAll()
             .anyRequest().authenticated()
 
             // Login handlers
