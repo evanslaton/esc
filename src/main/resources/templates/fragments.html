@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
+
 <head>
     <title>Esc | When You Just Couldn't Say No</title>
     <meta charset="UTF-8">
@@ -31,15 +32,19 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                    <li sec:authorize="!isAuthenticated()" class="nav-item">
+                        <a class="nav-link" href="/">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <!--th:text="${(user)} ? ${(user.username)} : 'Profile'"-->
+                    <li sec:authorize="isAuthenticated()" class="nav-item">
                         <a class="nav-link" href="/profile">Profile</a>
-
+                    </li>
+                    <li sec:authorize="!isAuthenticated()" class="nav-item">
+                        <a class="nav-link" th:href="@{/signup}">Sign Up</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/about">The Esc Team</a>
+                    </li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item">
                         <a class="nav-link" href="/perform_logout">Logout</a>
                     </li>
                 </ul>

@@ -29,7 +29,7 @@ public class UserController {
     @GetMapping(value="/")
     public ModelAndView serveHomePage(Principal p) {
         // DRL: -> Changed mapping to return ModelAndView, redirected logged in users to their profile.
-        if (((UsernamePasswordAuthenticationToken) p).isAuthenticated()) {
+        if ( p != null && ((UsernamePasswordAuthenticationToken) p).isAuthenticated()) {
             return new ModelAndView("redirect:/profile");
         }
         return new ModelAndView("index");
@@ -38,7 +38,7 @@ public class UserController {
     // Serves the signup page
     @GetMapping(value="/signup")
     public ModelAndView serveSignUpPage(Principal p) {
-        if (((UsernamePasswordAuthenticationToken) p).isAuthenticated()) {
+        if ( p != null && ((UsernamePasswordAuthenticationToken) p).isAuthenticated()) {
             // DRL: -> Changed mapping to return ModelAndView, redirected logged in users to their profile.
             return new ModelAndView("redirect:/profile");
         }
