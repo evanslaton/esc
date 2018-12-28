@@ -7,20 +7,29 @@
 <body>
     <div th:replace="~{fragments :: header}"></div>
 
-    <h1>SPLASH PAGE</h1>
 
-    <form action="/perform_login" method="POST">
-        <label for="username"></label>
-        <input id="username" name="username" type="text" />
 
-        <label for="password"></label>
-        <input id="password" name="password" type="password" />
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/perform_login" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input class="form-control" id="username" name="username" type="text" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" id="password" name="password" type="password" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
-        <input type="submit" />
-    </form>
-    <div>
+    <div class="container">
         <h2> Welcome to Escape!</h2>
         <p>When was the last time you were at a place and you would have rather been at home? Has your family been picking at your life choices and starting drama again? Or maybe you just have better things to do, but you don't want to look bad for leaving because you just got there? Well just about everyone has been in that situation, so we saw a problem that needed solving & we decided to create an application to solve it. Escape allows you to create a message and a time to send it on your profile and we will send your custom message to that number at your desired time, to get you out of those situations. Sign up is free and you have unlimited usage of our app, so now you can get out of next years Christmas parties. </p>
     </div>
+
+    <div th:replace="~{fragments :: scripts}"></div>
+
 </body>
 </html>
