@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>An Error Occurred</title>
+        <style>
+            table td {
+                vertical-align: top;
+                border: solid 1px #888;
+                padding: 10px;
+            }
+            .nav td {
+                vertical-align: top;
+                border: none;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>An Error Has Occurred</h3>
+        <nav th:replace="fragments.html :: nav"></nav>
+        <table>
+            <!--Error Page Format Found At: https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html
+            Retyped For Implementation. Did not include stack trace for security purposes.-->
+            <tr>
+                <td>Date</td>
+                <td th:text="${timestamp}" />
+            </tr>
+            <tr>
+                <td>Path</td>
+                <td th:text="${path}" />
+            </tr>
+            <tr>
+                <td>Error</td>
+                <td th:text="${error}" />
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td th:text="${status}" />
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td th:text="${message}" />
+            </tr>
+            <tr>
+                <td>Exception</td>
+                <td th:text="${exception}" />
+            </tr>
+        </table>
+    </body>
+</html>
