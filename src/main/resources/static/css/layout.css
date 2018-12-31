@@ -1,3 +1,32 @@
 .container {
     margin-bottom: 30px;
 }
+
+nav button {
+  background: #14B6C7 !important;
+
+  }
+
+/* unvisited link */
+nav a:link {
+  color: #EDE1B6;
+}
+
+/* visited link */
+nav a:visited {
+  color: #EDE1B6;
+}
+
+/* mouse over link */
+nav a:hover {
+  color: #e8553e ;
+}
+
+/* selected link */
+nav a:active {
+  color: blue;
+}
+
+
+
+

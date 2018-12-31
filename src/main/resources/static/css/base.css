@@ -1,10 +1,29 @@
-
 body {
+  background: #086498;
+  color: white;
+}
+
+main {
   width: 90%;
   margin: 0px auto;
 }
 
 nav {
     margin-bottom: 15px;
+    background: #092041;
+
 }
+
+
+@media only screen and (min-width: 770px) {
+
+    main {
+            display: grid;
+            grid-template-columns: 5% 40% 10% 40% 5%;
+            grid-template-rows: 85px;
+    }
+
+}
+
+
 
