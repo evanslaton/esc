@@ -1,3 +1,28 @@
 nav img {
     width: 100px;
 }
+
+.logo-text {
+    color: #e8553e;
+}
+
+
+@media only screen and (min-width: 770px) {
+
+
+
+
+    #app-description {
+            grid-column: 2;
+            grid-row: 2;
+    }
+
+    #user-form {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+
+
+
+}

@@ -67,4 +67,9 @@ public class UserController {
     public String serveProfilePage() {
         return "profile";
     }
+
+    @GetMapping(value="/about")
+    public String serveAboutUsPage() {
+        return "about";
+    }
 }
