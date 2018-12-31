@@ -70,3 +70,9 @@ MIT License
 **Anything Else**: expectations around work times, standup times, taking breaks/seeking help when you’re stuck, etc.
 
 * Pablo will have the role of project manager to organize the groups work.
+
+
+## Sources
+* Styling anchor tags: https://www.w3schools.com/css/css_link.asp
+* CSS Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
+* SVG Background: https://www.svgbackgrounds.com
