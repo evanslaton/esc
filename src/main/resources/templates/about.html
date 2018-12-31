@@ -6,33 +6,37 @@
 </head>
 <body>
     <div th:replace="~{fragments :: header}"></div>
-    <div id="about">
-        <h4>Operation: saving you </h4>
-        <p>Come on, lets be honest... We don't always mean it when we agree we want to hangout, or maybe you do initially and then it ends up being really boring, you get tired, they start annoying you, or maybe it's about to go  too crazy and your friends are about to do something not okay and you need to get out of there. Either way, we know what it's like to have to leave those situations and not want to look bad! We created escape as a solution to answer these types of problems and we hope you are happy with our application.</p>
-    </div>
-    <div id="team">
-        <h4>Who are we?</h4>
-        <p class="bio">Escape was created by group 1 and they are formed from members: Evan Slaton, Daniel Logerstedt, Jeff Borda, & Pablo Rosales.</p>
-        <div class="team-member" id="Evan">
-            <img src="https://placeholder.com/150">
-            <h2 class="name">Evan Slaton</h2>
-            <p class="blurb">Evan is a full stack developer with a specialty in Java based projects. Evan graduated from Ohio State with a Bachelors degree in Political Science. Evan has been a volunteer, manager, freelance web developer, and a recruiter for various fortune 500 companies so he knows what the inner workings of a company are like, and with that knowledge he can meet the expectations swiftly and efficiently. Evan enjoys X & X.</p>
-        </div>
-        <div class="team-member" id="Daniel">
-            <img src="https://placeholder.com/150">
-            <p class="name">Daniel Logerstedt</p>
-            <p class="blurb">Daniel is a veteran of the Army with three & a half years of service as a Satellite Communications Command Network Controller, a Satellite Communications Terminal Maintenance Supervisor, and a Satellite Communications Terminal Maintenance Specialist. Daniel wants to use his experience with communications to create better networks and hopefully make the world  little closer. He self studied programming as well as attended a boot camp and is now a full stack developer in JavaScript and in Java. Dan enjoys Snowboarding when he can & video games.</p>
-        </div>
-        <div class="team-member" id="Jeff">
-            <img src="https://placeholder.com/150">
-            <p class="name">Jeff Borda</p>
-            <p class="blurb">Jeff is an Army veteran, with two years of service and experience as an aircraft maintenance technician. Jeff is now a full stack Java web developer in the greater Seattle Area seeking new challenges and continuous learning opportunities. Jeff has a Bachelors of Science in Flight Technology from Central Washington University. Jeff enjoys playing the Guitar as well as the Accordion, & also likes flying twin engine airplanes around the Pacific Northwest. </p>
-        </div>
-        <div class="team-member" id="Pablo">
-            <img src="https://placeholder.com/150">
-            <p class="name">Pablo Rosales</p>
-            <p class="blurb">Pablo is a Latino developer in the greater Seattle area with an emphasis on client relations and has strong ties to the hispanic community. He studied Object Oriented Programming and Data Structures at Arizona State University in Java, is a web developer, and has a keen eye for detail. He enjoys being a collaborator and has a focus on customer oriented output. When hes not coding, he enjoys art and exploring the forests with his camera.</p>
-        </div>
-    </div>
+        <main>
+            <div id="about">
+                <h4>Operation: saving you </h4>
+                <p>Come on, lets be honest... We don't always mean it when we agree we want to hangout, or maybe you do initially and then it ends up being really boring, you get tired, they start annoying you, or maybe it's about to go  too crazy and your friends are about to do something not okay and you need to get out of there. Either way, we know what it's like to have to leave those situations and not want to look bad! We created escape as a solution to answer these types of problems and we hope you are happy with our application.</p>
+            </div>
+            <div id="team">
+                <h4>Who are we?</h4>
+                <p class="bio">Escape was created by group 1 and they are formed from members: Evan Slaton, Daniel Logerstedt, Jeff Borda, & Pablo Rosales.</p>
+                <div class="team-member" id="Evan">
+                    <img src="https://via.placeholder.com/150">
+                    <h2 class="name">Evan Slaton</h2>
+                    <p class="blurb">Evan is a full stack developer with a specialty in Java based projects. Evan graduated from Ohio State with a Bachelors degree in Political Science. Evan has been a volunteer, manager, freelance web developer, and a recruiter for various fortune 500 companies so he knows what the inner workings of a company are like, and with that knowledge he can meet the expectations swiftly and efficiently. Evan enjoys X & X.</p>
+                </div>
+                <div class="team-member" id="Daniel">
+                    <img src="https://via.placeholder.com/150">
+                    <p class="name">Daniel Logerstedt</p>
+                    <p class="blurb">Daniel is a veteran of the Army with three & a half years of service as a Satellite Communications Command Network Controller, a Satellite Communications Terminal Maintenance Supervisor, and a Satellite Communications Terminal Maintenance Specialist. Daniel wants to use his experience with communications to create better networks and hopefully make the world  little closer. He self studied programming as well as attended a boot camp and is now a full stack developer in JavaScript and in Java. Dan enjoys Snowboarding when he can & video games.</p>
+                </div>
+                <div class="team-member" id="Jeff">
+                    <img src="https://via.placeholder.com/150">
+                    <p class="name">Jeff Borda</p>
+                    <p class="blurb">Jeff is an Army veteran, with two years of service and experience as an aircraft maintenance technician. Jeff is now a full stack Java web developer in the greater Seattle Area seeking new challenges and continuous learning opportunities. Jeff has a Bachelors of Science in Flight Technology from Central Washington University. Jeff enjoys playing the Guitar as well as the Accordion, & also likes flying twin engine airplanes around the Pacific Northwest. </p>
+                </div>
+                <div class="team-member" id="Pablo">
+                    <img src="https://via.placeholder.com/150">
+                    <p class="name">Pablo Rosales</p>
+                    <p class="blurb">Pablo is a Latino developer in the greater Seattle area with an emphasis on client relations and has strong ties to the hispanic community. He studied Object Oriented Programming and Data Structures at Arizona State University in Java, is a web developer, and has a keen eye for detail. He enjoys being a collaborator and has a focus on customer oriented output. When hes not coding, he enjoys art and exploring the forests with his camera.</p>
+                </div>
+            </div>
+    </main>
+    <div th:replace="~{fragments :: scripts}"></div>
+
 </body>
 </html>
