@@ -3,22 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>An Error Occurred</title>
-        <style>
-            table td {
-                vertical-align: top;
-                border: solid 1px #888;
-                padding: 10px;
-            }
-            .nav td {
-                vertical-align: top;
-                border: none;
-                padding: 10px;
-            }
-        </style>
+        <div th:replace="~{fragments :: head}"></div>
     </head>
     <body>
+        <div th:replace="~{fragments :: header}"></div>
         <h3>An Error Has Occurred</h3>
-        <nav th:replace="fragments.html :: nav"></nav>
         <table>
             <!--Error Page Format Found At: https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html
             Retyped For Implementation. Did not include stack trace for security purposes.-->
