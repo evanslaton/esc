@@ -1,18 +1,12 @@
 package com.esc.message;
-
 import com.esc.user.ApplicationUser;
 import com.esc.user.ApplicationUserRepository;
-import org.joda.time.DateTime;
-import org.joda.time.LocalDateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
-
 import java.security.Principal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -45,13 +39,6 @@ public class MessageController {
         // Save the date in message database
         textMessageRepo.save(newMessage);
 
-//        System.out.println("*********************************************");
-//        System.out.println(textMessageRepo.findById((long) 1).get().message);
-//        Iterable<TextMessage> messages = textMessageRepo.findAll();
-//        for (TextMessage m : messages) {
-//            System.out.println(m.message);
-//        }
-//        System.out.println("*********************************************");
         return new RedirectView("/profile");
     }
 }
