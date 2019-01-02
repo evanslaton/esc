@@ -13,19 +13,19 @@ public class EscApplication {
 		SpringApplication.run(EscApplication.class, args);
 
 		System.out.println("http://localhost:8080");
-
-
-
-		MessageSender m = new MessageSender(textMessageRepo);
-		try {
-			System.out.println(m.getMessages());
-		} catch (Exception e) {
-			System.out.println(e);
-		}
+//
+//
+//
+//		MessageSender m = new MessageSender();
+//		try {
+//			m.getMessages();
+//		} catch (Exception e) {
+//			System.out.println(e);
+//		}
 	}
 
-	@Autowired
-	private static TextMessageRepository textMessageRepo;
-	
+//	@Autowired
+//	public MessageSender m;
+
 }
 

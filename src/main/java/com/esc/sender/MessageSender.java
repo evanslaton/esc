@@ -11,23 +11,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@Component
+@Service
 public class MessageSender {
-
-    @Autowired
     private TextMessageRepository textMessageRepo;
 
-    public Iterable<TextMessage> getMessages() throws Exception {
-//        String todaysDate = new Date().toString();
-//        Date sendDate = new SimpleDateFormat("yyyy-MM-dd").parse("2019-01-01");
-//        Date sendTime = new SimpleDateFormat("HH:mm").parse(todaysDate);
-
-        Iterable<TextMessage> messages = textMessageRepo.findAll();
-        return messages;
+    @Autowired
+    public void setTextMessageRepo(TextMessageRepository textMessageRepo) {
+        MessageSender.textMessageRepo = textMessageRepo;
     }
 
-    public MessageSender(TextMessageRepository repo) {
-        this.textMessageRepo = repo;
-    }
-
+    
 }

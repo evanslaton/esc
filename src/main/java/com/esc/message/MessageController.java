@@ -45,6 +45,13 @@ public class MessageController {
         // Save the date in message database
         textMessageRepo.save(newMessage);
 
+//        System.out.println("*********************************************");
+//        System.out.println(textMessageRepo.findById((long) 1).get().message);
+//        Iterable<TextMessage> messages = textMessageRepo.findAll();
+//        for (TextMessage m : messages) {
+//            System.out.println(m.message);
+//        }
+//        System.out.println("*********************************************");
         return new RedirectView("/profile");
     }
 }
