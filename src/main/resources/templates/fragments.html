@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org">
 
-<head>
-    <title>Esc | When You Just Couldn't Say No</title>
-    <meta charset="UTF-8">
-</head>
 <body>
 
     <!-- Head Fragment, includes meta information, Bootstrap CDN and custom CSS -->
-    <div th:fragment="head">
+    <div th:fragment="head" th:remove="tag">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -35,8 +31,8 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li sec:authorize="!isAuthenticated()" class="nav-item">
-                        <a class="nav-link" href="/">Login</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">The Esc Team</a>
                     </li>
                     <li sec:authorize="isAuthenticated()" class="nav-item">
                         <a class="nav-link" href="/profile">Profile</a>
@@ -44,8 +40,8 @@
                     <li sec:authorize="!isAuthenticated()" class="nav-item">
                         <a class="nav-link" th:href="@{/signup}">Sign Up</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">The Esc Team</a>
+                    <li sec:authorize="!isAuthenticated()" class="nav-item">
+                        <a class="nav-link" href="/">Login</a>
                     </li>
                     <li sec:authorize="isAuthenticated()" class="nav-item">
                         <a class="nav-link" href="/perform_logout">Logout</a>
@@ -54,7 +50,12 @@
             </div>
         </nav>
     </div>
-
+    <div th:fragment="description" th:remove="tag">
+        <div class="container" id="app-description">
+            <h2> Welcome to <span class="logo-text">Escape</span></h2>
+            <p>When was the last time you were at a place and you would have rather been at home? Has your family been picking at your life choices and starting drama again? Or maybe you just have better things to do, but you don't want to look bad for leaving because you just got there? Well just about everyone has been in that situation, so we saw a problem that needed solving & we decided to create an application to solve it. Escape allows you to create a message and a time to send it on your profile and we will send your custom message to that number at your desired time, to get you out of those situations. Sign up is free and you have unlimited usage of our app, so now you can get out of next years Christmas parties. </p>
+        </div>
+    </div>
     <!-- Scripts Fragment, contains jQuery, Bootstrap and custom scripts -->
     <div th:fragment="scripts">
         <!-- Bootstrap / jQuery -->
