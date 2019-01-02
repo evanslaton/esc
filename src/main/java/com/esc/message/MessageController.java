@@ -31,11 +31,6 @@ public class MessageController {
         String dateTimeString = day + " " + time;
         Date sendTimestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dateTimeString);
 
-
-        //TESTING
-        System.out.println(new Date());
-        System.out.println(sendTimestamp);
-
         //   - Make sure the Date is at least 30 minutes in the future
 
         // Construct Message object

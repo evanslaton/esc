@@ -3,6 +3,7 @@ package com.esc.twilioscheduler;
 import com.esc.message.TextMessage;
 import com.esc.message.TextMessageRepository;
 import com.esc.user.ApplicationUserRepository;
+import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
 
 @Controller
 public class SenderController {
@@ -29,46 +32,32 @@ public class SenderController {
 
         // Get current Date
         Date now = new Date();
-        DateFormat timeStampFormatter = new SimpleDateFormat("yyyy/MM/dd HH:mm");
-        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
-        DateFormat timeFormatter = new SimpleDateFormat("HH:mm");
+
 
         // Get all messages
         List<TextMessage> messages = (List<TextMessage>) textMessageRepo.findAll();
 
-        // Filter out messages with today's day, times before current time, and message not sent yet.
-        // Loop through messages
-        //    Get phone number associated with message
-        //    Send message through twilio
-        //    Set boolean to true
-        for (TextMessage m : messages) {
+        for(TextMessage m : messages) {
 
-//            Date messageDate = (Date) m.date;
-//            Date messageTime = (Date) m.time;
+            if((m.sendTimestamp.before(now) || m.sendTimestamp.equals(now)) && !m.wasSent) {
+                // TWILIO SEND
 
-//            System.out.println(messageDate);
-//            System.out.println(messageTime);
+                Twilio.init(System.getenv("ACCOUNT_SID"), System.getenv("AUTH_TOKEN"));
 
+                /* First number is the TO number, must be a verified number in Twilio
+                 * Second number is our Twilio number that CANNOT be changed
+                 */
+                Message message = Message.creator(new PhoneNumber("2069313616"),
+                        new PhoneNumber("+12062028535"),
+                        m.message).create();
 
+                m.wasSent = true;
+                textMessageRepo.save(m);
 
+            }
 
-
-
-//            if(messageDate == now. && (m.time == nowTime || m.time.before(nowTime)) && !m.was_sent) {
-//                // Send message with Twilio
-//                System.out.println("Message DATE: " + m.date);
-//                System.out.println("Message TIME: " + m.time);
-//            }
-
-
-
-
-//            if(m.date == nowDate && (m.time == nowTime || m.time.before(nowTime)) && !m.was_sent) {
-//                // Send message with Twilio
-//                System.out.println("Message DATE: " + m.date);
-//                System.out.println("Message TIME: " + m.time);
-//            }
         }
+
 
         return new RedirectView("/profile");
     }
