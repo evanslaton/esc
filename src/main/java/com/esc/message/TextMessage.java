@@ -5,6 +5,7 @@ import org.joda.time.DateTime;
 import org.joda.time.LocalDateTime;
 
 import javax.persistence.*;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -13,12 +14,10 @@ public class TextMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
-    @Temporal(TemporalType.DATE)
-    public Date date;
-    @Temporal(TemporalType.TIME)
-    public Date time;
+    @Temporal(TemporalType.TIMESTAMP)
+    public Date sendTimestamp;
     public String message;
-    public Boolean was_sent;
+    public Boolean wasSent;
 
     // Database Relationship(s)
     @ManyToOne
@@ -28,10 +27,9 @@ public class TextMessage {
     public TextMessage() {}
 
     // Constructor
-    public TextMessage(Date date, Date time, String message) {
-        this.date = date;
-        this.time = time;
+    public TextMessage(Date sendTimestamp, String message) {
+        this.sendTimestamp = sendTimestamp;
         this.message = message;
-        this.was_sent = false;
+        this.wasSent = false;
     }
 }

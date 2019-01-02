@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 import java.security.Principal;
+import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 @Controller
@@ -24,13 +27,19 @@ public class MessageController {
     @PostMapping(value="/messages")
     public RedirectView createMessage(@RequestParam String day, @RequestParam String time, @RequestParam String rawMessage, Principal p) throws ParseException {
         // Construct and format the Date
-        Date sendDate = new SimpleDateFormat("yyyy-MM-dd").parse(day);
-        Date sendTime = new SimpleDateFormat("HH:mm").parse(time);
+
+        String dateTimeString = day + " " + time;
+        Date sendTimestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dateTimeString);
+
+
+        //TESTING
+        System.out.println(new Date());
+        System.out.println(sendTimestamp);
 
         //   - Make sure the Date is at least 30 minutes in the future
 
         // Construct Message object
-        TextMessage newMessage = new TextMessage(sendDate, sendTime, rawMessage);
+        TextMessage newMessage = new TextMessage(sendTimestamp, rawMessage);
 
         // Link the message to the signed in user.
         ApplicationUser user = (ApplicationUser) ((UsernamePasswordAuthenticationToken) p).getPrincipal();
