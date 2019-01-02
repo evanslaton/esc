@@ -26,12 +26,10 @@ public class MessageController {
     // This route saves a user's text message and redirects them to their profile.
     @PostMapping(value="/messages")
     public RedirectView createMessage(@RequestParam String day, @RequestParam String time, @RequestParam String rawMessage, Principal p) throws ParseException {
-        // Construct and format the Date
 
+        // Construct and format the Date
         String dateTimeString = day + " " + time;
         Date sendTimestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dateTimeString);
-
-        //   - Make sure the Date is at least 30 minutes in the future
 
         // Construct Message object
         TextMessage newMessage = new TextMessage(sendTimestamp, rawMessage);
