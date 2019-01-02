@@ -30,13 +30,13 @@ public class MessageController {
     @PostMapping(value="/messages")
     public RedirectView createMessage(@RequestParam String day, @RequestParam String time, @RequestParam String rawMessage, Principal p) throws ParseException {
         // Construct and format the Date
-        String dateTimeString = day + " " + time;
-        Date dateTime = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(dateTimeString);
+        Date sendDate = new SimpleDateFormat("yyyy-MM-dd").parse(day);
+        Date sendTime = new SimpleDateFormat("HH:mm").parse(time);
 
         //   - Make sure the Date is at least 30 minutes in the future
 
         // Construct Message object
-        TextMessage newMessage = new TextMessage(dateTime, rawMessage);
+        TextMessage newMessage = new TextMessage(sendDate, sendTime, rawMessage);
 
         // Link the message to the signed in user.
         ApplicationUser user = (ApplicationUser) ((UsernamePasswordAuthenticationToken) p).getPrincipal();

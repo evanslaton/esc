@@ -13,9 +13,12 @@ public class TextMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
-    @Temporal(TemporalType.TIMESTAMP)
-    public Date datetime;
+    @Temporal(TemporalType.DATE)
+    public Date date;
+    @Temporal(TemporalType.TIME)
+    public Date time;
     public String message;
+    public Boolean was_sent;
 
     // Database Relationship(s)
     @ManyToOne
@@ -25,8 +28,10 @@ public class TextMessage {
     public TextMessage() {}
 
     // Constructor
-    public TextMessage(Date datetime, String message) {
-        this.datetime = datetime;
+    public TextMessage(Date date, Date time, String message) {
+        this.date = date;
+        this.time = time;
         this.message = message;
+        this.was_sent = false;
     }
 }
