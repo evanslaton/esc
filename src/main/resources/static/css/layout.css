@@ -9,22 +9,22 @@ nav button {
 
 /* unvisited link */
 nav a:link {
-  color: #EDE1B6;
+  color: #EDE1B6 !important;
 }
 
 /* visited link */
 nav a:visited {
-  color: #EDE1B6;
+  color: #EDE1B6 !important;
 }
 
 /* mouse over link */
 nav a:hover {
-  color: #e8553e ;
+  color: #e8553e !important;
 }
 
 /* selected link */
 nav a:active {
-  color: blue;
+  color: blue !important;
 }
 
 

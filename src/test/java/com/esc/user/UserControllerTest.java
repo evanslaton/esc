@@ -45,7 +45,7 @@ public class UserControllerTest {
         testHome.createEntity();
         testHome.request("GET", "/");
         assertEquals(200, testHome.responseCodeInt());
-        assertTrue(testHome.responseBody().contains("<h1>SPLASH PAGE</h1>"));
+        assertTrue(testHome.responseBody().contains("<h2>Login</h2>"));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class UserControllerTest {
         testSignup.createEntity();
         testSignup.request("GET", "/signup");
         assertEquals(200, testSignup.responseCodeInt());
-        assertTrue(testSignup.responseBody().contains("<h1>SIGNUP PAGE</h1>"));
+        assertTrue(testSignup.responseBody().contains("<h2>Sign Up</h2>"));
     }
 
     @Test
@@ -105,6 +105,6 @@ public class UserControllerTest {
         testProfile.resetResponse();
         testProfile.request("GET", "/profile");
         assertEquals(200, testProfile.responseCodeInt());
-        assertTrue(testProfile.responseBody().contains("<h1>PROFILE PAGE</h1>"));
+        assertTrue(testProfile.responseBody().contains("<h2>Create New Message</h2>"));
     }
 }
