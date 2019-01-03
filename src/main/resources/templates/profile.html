@@ -30,9 +30,9 @@
         <div class="container" id="messages-box">
             <h2>Upcoming Messages</h2>
             <ul id="message-list">
-                <li th:each="m : ${messages}">
+                <li th:each="m : ${messages}" th:if="${!m.wasSent}">
                     <div class="message">
-                        <p>Time: <span class="logo-text" th:text="${m.sendTimestamp}"></span></p>
+                        <p>Send at: <span class="logo-text" th:text="${m.sendTimestamp}"></span></p>
 
                         <p th:text="${m.message}"></p>
                     </div>

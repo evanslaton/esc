@@ -25,11 +25,16 @@ nav {
 @media only screen and (min-width: 770px) {
 
     main {
-            display: grid;
-            grid-template-columns: 5% 40% 10% 40% 5%;
-            grid-template-rows: 85px;
+        display: grid;
+        grid-template-columns: 5% 40% 10% 40% 5%;
+        grid-template-rows: 85px;
     }
 
+    .about-main {
+        display: grid;
+        grid-template-columns: 5% 40% 10% 40% 5%;
+        grid-template-rows: 85px 800px;
+    }
 }
 
 

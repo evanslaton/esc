@@ -9,35 +9,40 @@
         <div th:replace="~{fragments :: header}"></div>
 
         <main>
-            <h3>An Error Has Occurred</h3>
-            <table>
-                <!--Error Page Format Found At: https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html
-                Retyped For Implementation. Did not include stack trace for security purposes.-->
-                <tr>
-                    <td>Date</td>
-                    <td th:text="${timestamp}" />
-                </tr>
-                <tr>
-                    <td>Path</td>
-                    <td th:text="${path}" />
-                </tr>
-                <tr>
-                    <td>Error</td>
-                    <td th:text="${error}" />
-                </tr>
-                <tr>
-                    <td>Status</td>
-                    <td th:text="${status}" />
-                </tr>
-                <tr>
-                    <td>Message</td>
-                    <td th:text="${message}" />
-                </tr>
-                <tr>
-                    <td>Exception</td>
-                    <td th:text="${exception}" />
-                </tr>
-            </table>
+
+
+            <div class="container" id="error-info">
+                <h3>An Error Has Occurred</h3>
+                <table>
+                    <!--Error Page Format Found At: https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html
+                    Retyped For Implementation. Did not include stack trace for security purposes.-->
+                    <tr>
+                        <td>Date</td>
+                        <td th:text="${timestamp}" />
+                    </tr>
+                    <tr>
+                        <td>Path</td>
+                        <td th:text="${path}" />
+                    </tr>
+                    <tr>
+                        <td>Error</td>
+                        <td th:text="${error}" />
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td th:text="${status}" />
+                    </tr>
+                    <tr>
+                        <td>Message</td>
+                        <td th:text="${message}" />
+                    </tr>
+                    <tr>
+                        <td>Exception</td>
+                        <td th:text="${exception}" />
+                    </tr>
+                </table>
+            </div>
+
         </main>
 
     </body>
