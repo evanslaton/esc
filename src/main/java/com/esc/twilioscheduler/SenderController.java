@@ -26,7 +26,7 @@ public class SenderController {
 
     // Sends scheduled messages from database
     @PostMapping(value="/scheduler")
-    public void getMessages(@RequestParam String key) throws ParseException {
+    public RedirectView getMessages(@RequestParam String key) throws ParseException {
 
         // Checks to make sure only an "authorized user" can run this code
         if (key == System.getenv("HEROKU_KEY")) {
@@ -53,5 +53,6 @@ public class SenderController {
                 }
             }
         }
+        return new RedirectView("/profile");
     }
 }
