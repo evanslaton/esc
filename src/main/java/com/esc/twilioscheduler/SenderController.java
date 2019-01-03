@@ -7,6 +7,7 @@ import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 import java.text.ParseException;
 import java.util.Date;
@@ -24,27 +25,31 @@ public class SenderController {
 
     // Sends scheduled messages from database
     @GetMapping(value="/scheduler")
-    public RedirectView getMessages() throws ParseException {
+    public RedirectView getMessages(@RequestParam String key) throws ParseException {
 
-        // Get current Date
-        Date now = new Date();
+        // Checks to make sure only an "authorized user" can run this code
+        if (key == System.getenv("HEROKU_KEY")) {
 
-        // Get all messages
-        List<TextMessage> messages = (List<TextMessage>) textMessageRepo.findAll();
+            // Get current Date
+            Date now = new Date();
 
-        for(TextMessage m : messages) {
+            // Get all messages
+            List<TextMessage> messages = (List<TextMessage>) textMessageRepo.findAll();
 
-            if((m.sendTimestamp.before(now) || m.sendTimestamp.equals(now)) && !m.wasSent) {
+            for (TextMessage m : messages) {
 
-                // Twilio auth
-                Twilio.init(System.getenv("ACCOUNT_SID"), System.getenv("AUTH_TOKEN"));
-                // Twilio send text message
-                Message message = Message.creator(new PhoneNumber(m.applicationUser.phoneNumber),
-                        new PhoneNumber("+12062028535"),
-                        m.message).create();
+                if ((m.sendTimestamp.before(now) || m.sendTimestamp.equals(now)) && !m.wasSent) {
 
-                m.wasSent = true;
-                textMessageRepo.save(m);
+                    // Twilio auth
+                    Twilio.init(System.getenv("ACCOUNT_SID"), System.getenv("AUTH_TOKEN"));
+                    // Twilio send text message
+                    Message message = Message.creator(new PhoneNumber(m.applicationUser.phoneNumber),
+                            new PhoneNumber("+12062028535"),
+                            m.message).create();
+
+                    m.wasSent = true;
+                    textMessageRepo.save(m);
+                }
             }
         }
         return new RedirectView("/profile");
