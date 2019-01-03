@@ -7,6 +7,7 @@ import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 import java.text.ParseException;
@@ -24,8 +25,8 @@ public class SenderController {
     private ApplicationUserRepository appUserRepo;
 
     // Sends scheduled messages from database
-    @GetMapping(value="/scheduler")
-    public RedirectView getMessages(@RequestParam String key) throws ParseException {
+    @PostMapping(value="/scheduler")
+    public void getMessages(@RequestParam String key) throws ParseException {
 
         // Checks to make sure only an "authorized user" can run this code
         if (key == System.getenv("HEROKU_KEY")) {
@@ -52,6 +53,5 @@ public class SenderController {
                 }
             }
         }
-        return new RedirectView("/profile");
     }
 }
