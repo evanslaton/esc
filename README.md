@@ -39,6 +39,7 @@ Practical Application:
 * [Styling anchor tags](https://www.w3schools.com/css/css_link.asp)
 * [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [SVG Background](https://www.svgbackgrounds.com)
+* Facebook for sign up page inspiration
 
 ## License
 MIT License
