@@ -3,7 +3,8 @@ nav img {
 }
 
 .logo-text {
-    color: #e8553e;
+    /*color: #e8553e;*//*this is the original color*/
+    color: #ff5d44;
 }
 
 form button {
@@ -56,6 +57,46 @@ form button {
     #error-info {
         grid-column: 2;
         grid-row: 2;
+    }
+
+
+    /*  About Us - desktop view */
+    #team {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #jeff {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #daniel {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    #pablo {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #evan {
+        grid-column: 4;
+        grid-row: 4;
+    }
+
+    /* Jeff and Pablo */
+    .name-light {
+        /*color: #e8553e;*//*this is the original color*/
+        color: #ff5d44;
+    }
+
+    /* Dan and Evan*/
+    .name-dark {
+        color: #e8553e;
     }
 
 
