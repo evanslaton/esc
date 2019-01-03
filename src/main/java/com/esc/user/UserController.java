@@ -64,7 +64,10 @@ public class UserController {
 
     // Serves the user's profile page
     @GetMapping(value="/profile")
-    public String serveProfilePage() {
+    public String serveProfilePage(Model m, Principal p) {
+        ApplicationUser user = (ApplicationUser)((UsernamePasswordAuthenticationToken) p).getPrincipal();
+        m.addAttribute("messages", user.messages);
+        System.out.println(user.messages);
         return "profile";
     }
 
