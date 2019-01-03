@@ -11,11 +11,13 @@ body {
 main {
   width: 90%;
   margin: 0px auto;
+  padding-top: 25px;
 }
 
 nav {
     margin-bottom: 15px;
     background: #092041;
+    border-bottom: 1px solid black;
 
 }
 
