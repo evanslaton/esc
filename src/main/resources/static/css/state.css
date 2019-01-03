@@ -1,3 +1,5 @@
+
+/* Messages Sent Styles */
     #messages-box {
         grid-column: 2;
         grid-row: 2;
@@ -5,11 +7,12 @@
 
     #messages-box ul {
         list-style: none;
+        padding: 0 !important;
     }
 
     #messages-box h2 {
-        padding-left: 15px;
         text-align: center;
+        margin-bottom: 1.5rem;
     }
 
     .message-list{
@@ -20,7 +23,8 @@
     .message {
         background: #ffffffaa;
         padding: 15px 25px 5px 25px;
-        margin: 10px 0px 10px -15px;
+        margin: 10px 0px 10px 0px;
         width: 100%;
         border-radius: 5px;
+        color: #222;
     }

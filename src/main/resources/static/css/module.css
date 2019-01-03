@@ -6,10 +6,41 @@ nav img {
     color: #e8553e;
 }
 
+form button {
+    margin-top: 15px;
+    width: 100% !important;
+}
+
+.signup-button {
+
+    width: 100%;
+}
+
+.signup-button button {
+    background: #E8553E !important;
+    border-color: #E8553E;
+    display: block;
+    margin: 0px auto;
+    width: 40% !important;
+}
+
+.or {
+    margin: 10px auto;
+    text-align: center;
+}
+
 
 @media only screen and (min-width: 770px) {
 
 
+    form button {
+        width: 100px !important;
+        box-shadow: 1px 1px 3px #222222 !important;
+    }
+
+    .signup-button, .or {
+        display: none;
+    }
 
 
     #app-description {
@@ -22,6 +53,10 @@ nav img {
         grid-row: 2;
     }
 
+    #error-info {
+        grid-column: 2;
+        grid-row: 2;
+    }
 
 
 
