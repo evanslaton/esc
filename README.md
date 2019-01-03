@@ -35,6 +35,12 @@ Practical Application:
 
 ## Third Party Resources:
 * [Twilio](https://www.twilio.com/docs/sms)
+* [Heroku Scheduler](https://elements.heroku.com/addons/scheduler)
+* [Dave Muench](https://github.com/RazorWire13)
+* [Bootstrap](https://getbootstrap.com/)
+* [Styling anchor tags](https://www.w3schools.com/css/css_link.asp)
+* [CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [SVG Background](https://www.svgbackgrounds.com)
 
 ## License
 MIT License
@@ -70,9 +76,3 @@ MIT License
 **Anything Else**: expectations around work times, standup times, taking breaks/seeking help when you’re stuck, etc.
 
 * Pablo will have the role of project manager to organize the groups work.
-
-
-## Sources
-* Styling anchor tags: https://www.w3schools.com/css/css_link.asp
-* CSS Grid: https://css-tricks.com/snippets/css/complete-guide-grid/
-* SVG Background: https://www.svgbackgrounds.com
