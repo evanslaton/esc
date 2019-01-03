@@ -7,7 +7,6 @@ import com.twilio.Twilio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
@@ -26,10 +25,13 @@ public class SenderController {
     private ApplicationUserRepository appUserRepo;
 
     // Sends scheduled messages from database
-    @GetMapping(value="/scheduler/{key}")
-    public RedirectView getMessages(@PathVariable String key) throws ParseException {
+    @PostMapping(value="/scheduler")
+    public RedirectView getMessages(@RequestParam String key) throws ParseException {
 
         // Checks to make sure only an "authorized user" can run this code
+        System.out.println(key);
+        System.out.println(System.getenv("HEROKU_KEY"));
+        System.out.println(key == System.getenv("HEROKU_KEY"));
         if (key == System.getenv("HEROKU_KEY")) {
 
             // Get current Date
@@ -54,6 +56,7 @@ public class SenderController {
                 }
             }
         }
+        System.out.println("END");
         return new RedirectView("/profile");
     }
 }
