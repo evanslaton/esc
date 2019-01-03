@@ -8,11 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
 import java.security.Principal;
-import java.sql.Timestamp;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 @Controller
@@ -39,6 +36,8 @@ public class MessageController {
         newMessage.applicationUser = appRepo.findByUsername(user.username);
 
         // Save the date in message database
+        user.messages.add(newMessage);
+        appRepo.save(user);
         textMessageRepo.save(newMessage);
 
         return new RedirectView("/profile");

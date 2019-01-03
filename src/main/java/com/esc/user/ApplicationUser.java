@@ -20,7 +20,7 @@ public class ApplicationUser implements UserDetails {
     public String phoneNumber;
 
     // Database Relationship(s)
-    @OneToMany(mappedBy="applicationUser")
+    @OneToMany(mappedBy="applicationUser", fetch=FetchType.EAGER)
     public List<TextMessage> messages;
 
     // Default constructor

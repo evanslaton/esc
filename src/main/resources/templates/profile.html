@@ -27,6 +27,18 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
+        <div class="container" id="messages-box" style="grid-column: 2; grid-row: 2;">
+            <h2>Upcoming Messages</h2>
+            <ul id="message-list" style="height: 500px; overflow: scroll;">
+                <li th:each="m : ${messages}">
+                    <div class="message" style="background: #b3b3b3aa;">
+                        <p>Time: <span class="logo-text" th:text="${m.sendTimestamp}"></span></p>
+
+                        <p th:text="${m.message}"></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <div th:replace="~{fragments :: scripts}"></div>
