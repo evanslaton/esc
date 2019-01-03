@@ -5,6 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -31,6 +32,7 @@ public class ApplicationUser implements UserDetails {
         this.username = username;
         this.password = password;
         this.phoneNumber = phoneNumber;
+        this.messages = new ArrayList<TextMessage>();
     }
 
     @Override
