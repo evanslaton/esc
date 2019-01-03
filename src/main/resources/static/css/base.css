@@ -24,16 +24,16 @@ nav {
 
 @media only screen and (min-width: 770px) {
 
-    main {
+    #index-main, #profile-main, #signup-main, #error-main {
         display: grid;
         grid-template-columns: 5% 40% 10% 40% 5%;
         grid-template-rows: 85px;
     }
 
-    .about-main {
+    #about-main {
         display: grid;
         grid-template-columns: 5% 40% 10% 40% 5%;
-        grid-template-rows: 85px 800px;
+            grid-template-rows: 0px 138px 520px auto;
     }
 }
 

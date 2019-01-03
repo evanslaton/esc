@@ -59,5 +59,35 @@ form button {
     }
 
 
+    /*  About Us - desktop view */
+    #team {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    #jeff {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #daniel {
+        grid-column: 4;
+        grid-row: 3;
+    }
+
+    #pablo {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #evan {
+        grid-column: 4;
+        grid-row: 4;
+    }
+
+
+
 
 }
