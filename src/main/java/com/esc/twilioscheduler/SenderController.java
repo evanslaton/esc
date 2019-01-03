@@ -28,7 +28,7 @@ public class SenderController {
     public RedirectView getMessages(@RequestParam String key) throws ParseException {
 
         // Checks to make sure only an "authorized user" can run this code
-        if (key == System.getenv("HEROKU_KEY")) {
+//        if (key == System.getenv("HEROKU_KEY")) {
 
             // Get current Date
             Date now = new Date();
@@ -50,7 +50,7 @@ public class SenderController {
                     m.wasSent = true;
                     textMessageRepo.save(m);
                 }
-            }
+//            }
         }
         return new RedirectView("/profile");
     }
