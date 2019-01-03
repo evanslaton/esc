@@ -19,7 +19,8 @@ nav a:visited {
 
 /* mouse over link */
 nav a:hover {
-  color: #e8553e !important;
+  /*color: #e8553e !important;*//* original color*/
+  color: #ff5d44 !important;
 }
 
 /* selected link */
@@ -27,6 +28,21 @@ nav a:active {
   color: blue !important;
 }
 
+
+/* About Us Styles */
+.team-member {
+    padding: 0 !important;
+    margin: 0 auto 55px !important;
+}
+
+.team-member img {
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.team-member h2 {
+    text-align: center;
+}
 
 
 

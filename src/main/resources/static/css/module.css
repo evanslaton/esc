@@ -3,7 +3,8 @@ nav img {
 }
 
 .logo-text {
-    color: #e8553e;
+    /*color: #e8553e;*//*this is the original color*/
+    color: #ff5d44;
 }
 
 form button {
@@ -87,6 +88,16 @@ form button {
         grid-row: 4;
     }
 
+    /* Jeff and Pablo */
+    .name-light {
+        /*color: #e8553e;*//*this is the original color*/
+        color: #ff5d44;
+    }
+
+    /* Dan and Evan*/
+    .name-dark {
+        color: #e8553e;
+    }
 
 
 
