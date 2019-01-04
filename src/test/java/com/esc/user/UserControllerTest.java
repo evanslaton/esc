@@ -128,8 +128,9 @@ public class UserControllerTest {
         testNewUser.createEntity();
         testNewUser.request("POST", "/signup");
         EscIntegrationSuite testMessage = new EscIntegrationSuite(port, restTemplate);
-        testMessage.setBody("day", "01/05/2019");
-        testMessage.setBody("time", "10:15 PM");
+        testMessage.setHeaders("Cookie", testNewUser.responseCookieIndex(0));
+        testMessage.setBody("day", "2019-01-05");
+        testMessage.setBody("time", "10:15");
         testMessage.setBody("rawMessage", "This Is A Test");
         testMessage.createEntity();
         testMessage.request("POST", "/messages");
@@ -140,6 +141,8 @@ public class UserControllerTest {
         testProfile.resetResponse();
         testProfile.request("GET", "/profile");
         assertEquals(200, testProfile.responseCodeInt());
-        assertTrue(testProfile.responseBody().contains("<p>This Is A Test</p>"));
+        System.out.println(testProfile.responseBody());
+        assertTrue(testProfile.responseBody().contains("<div class=\"message\">"));
+        assertTrue(testProfile.responseBody().contains("This Is A Test"));
     }
 }
