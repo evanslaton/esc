@@ -20,12 +20,13 @@ nav a:visited {
 /* mouse over link */
 nav a:hover {
   /*color: #e8553e !important;*//* original color*/
-  color: #ff5d44 !important;
+  color: #ffae00 !important;
 }
 
 /* selected link */
 nav a:active {
-  color: blue !important;
+  /*color: #e8553e !important;*//* original color*/
+  color: #ffae00 !important;
 }
 
 

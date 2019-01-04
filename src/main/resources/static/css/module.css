@@ -4,7 +4,9 @@ nav img {
 
 .logo-text {
     /*color: #e8553e;*//*this is the original color*/
-    color: #ff5d44;
+    /*color: #ff5d44;*/
+    color: #ffae00;
+
 }
 
 form button {
@@ -91,12 +93,14 @@ form button {
     /* Jeff and Pablo */
     .name-light {
         /*color: #e8553e;*//*this is the original color*/
-        color: #ff5d44;
+        /*color: #ff5d44;*/
+        color: #ffae00;
     }
 
     /* Dan and Evan*/
     .name-dark {
-        color: #e8553e;
+        /*color: #e8553e;*/
+        color: #ffd100;
     }
 
 
