@@ -29,12 +29,15 @@ public class SenderController {
     public RedirectView getMessages(@RequestParam String key) throws ParseException {
 
         // Checks to make sure only an "authorized user" can run this code
+        // As we discussed, this is quite the hack, but I'm glad you got it implemented.
         if (key.equals(System.getenv("HEROKU_KEY"))) {
 
             // Get current Date
             Date now = new Date();
 
             // Get all messages
+            // Oof. I'd much prefer to do this with a query specified in your repo.
+            // Perhaps finding all that fall within a certain timestamp range for the requested send?
             List<TextMessage> messages = (List<TextMessage>) textMessageRepo.findAll();
 
             for (TextMessage m : messages) {

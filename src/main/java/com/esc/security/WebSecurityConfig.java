@@ -42,6 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
 
             // Pages anyone is authorized to go to at any time (including not logged in)
+                // Anything that's permitAll() can be collected on one line, like you've done for these first three patterns!
             .antMatchers("/", "/signup", "/scheduler").permitAll()
             .antMatchers("/about").permitAll()
             .antMatchers("/images/**").permitAll()
@@ -71,8 +72,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-    @Bean
-    public SpringSecurityDialect springSecurityDialect() {
-        return new SpringSecurityDialect();
-    }
+    // seems like this bean was unnecessary; everything runs fine without it.
 }

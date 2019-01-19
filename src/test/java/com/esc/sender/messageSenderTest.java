@@ -22,6 +22,8 @@ public class messageSenderTest {
     @Autowired
     private TextMessageRepository textMessageRepo;
 
+    // oh nooooooo this sort of zombie code makes me so sad!
+    // does this code work? if so, include it! if not, get rid of it!
     @Test
     public void testThings() throws Exception {
 //        List<TextMessage> messages = TextMessageRepo.findAllWithCurrentDate(new SimpleDateFormat("yyyy-MM-dd").parse("2019-01-01"));
