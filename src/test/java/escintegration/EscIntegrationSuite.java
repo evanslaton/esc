@@ -190,6 +190,7 @@ public class EscIntegrationSuite {
      * @param url String url for request.
      */
 
+    // Rather than taking in a String here, I'd prefer to take in the HttpMethod directly, so that you don't need the switch/case at all.
     public void request(String method, String url) {
         switch (method) {
             case "GET" :
@@ -216,6 +217,7 @@ public class EscIntegrationSuite {
      * @param url URI for request.
      */
 
+    // Here, just call your other request method, i.e. this.request(method, uri.toString());
     public void request(String method, URI url) {
         switch (method) {
             case "GET" :
@@ -242,6 +244,7 @@ public class EscIntegrationSuite {
      * @param url String url for request.
      */
 
+    // oh, that method exists! instead, call this method from your other method, and extract out the switch/case to a helper method.
     public void request(HttpMethod method, String url) {
         this.response = this.restTemplate.exchange("http://localhost:" + port + url, method, this.requestEntity, String.class);
     }
@@ -252,7 +255,6 @@ public class EscIntegrationSuite {
      * @param method HttpMethod for request.
      * @param url URI for request.
      */
-
     public void request(HttpMethod method, URI url) {
         this.response = this.restTemplate.exchange("http://localhost:" + port + url, method, this.requestEntity, String.class);
     }

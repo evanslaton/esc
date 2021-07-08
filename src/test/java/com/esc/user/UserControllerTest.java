@@ -18,6 +18,7 @@ import static org.junit.Assert.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserControllerTest {
 
+    // Overall, I see lots of tests in this file for the expected behavior, but not a lot of tests for logins that fail, usernames that don't exist, trying to create users with duplicate usernames, that sort of thing. More failure test cases!
     @LocalServerPort
     private int port;
 
@@ -68,6 +69,7 @@ public class UserControllerTest {
         testNewUser.request("POST", "/signup");
         assertEquals(302, testNewUser.responseCodeInt());
         assertTrue(testNewUser.responseCookieIndex(0).contains("JSESSIONID"));
+        // It makes sense to make that request, but afterwards I'd also want to check that the JSESSIONID cookie has been deleted.
         testNewUser.request("GET", "/perform_logout");
     }
 
@@ -96,6 +98,7 @@ public class UserControllerTest {
         testNewUser.setBody("username", username);
         testNewUser.setBody("password", password);
         testNewUser.setBody("phoneNumber", "555-555-5555");
+        // since you have to call createEntity before you call request, couldn't you just call that method inside of the request method in the integration suite?
         testNewUser.createEntity();
         testNewUser.request("POST", "/signup");
         EscIntegrationSuite testProfile = new EscIntegrationSuite(port, restTemplate);

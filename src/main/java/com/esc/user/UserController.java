@@ -28,6 +28,8 @@ public class UserController {
     // Serves the home page (which is also the login page)
     @GetMapping(value="/")
     public ModelAndView serveHomePage(Principal p) {
+        // It seems like you've left in a comment here about a one time change?
+        // In general, try to prefer putting things like this in a commit message.
         // DRL: -> Changed mapping to return ModelAndView, redirected logged in users to their profile.
         if ( p != null && ((UsernamePasswordAuthenticationToken) p).isAuthenticated()) {
             return new ModelAndView("redirect:/profile");
